@@ -25,27 +25,20 @@ Use the following command to activate the environment:
 conda activate DS_final_project
 ```
 
-### Step 2: Complete your watermark implementation
-You only have modify the file wm_student.py to complete this project.
-Implement your version of "insert_watermark", "extract_features" and "train_detector"
-Please do not modify the file wm_base.py and main.py.
-You may trace the code to understand how the framework work.
-```python
-    def insert_watermark(self, model: nn.Module) -> nn.Module:
-        #[TODO]
-        pass
-
-    def extract_features(self, model: nn.Module) -> torch.Tensor:
-        #[TODO]
-
-    def train_detector(self, clean_models: list, wm_models: list, epochs: int = 100):
-        #[TODO]
-        pass
-```
-
-### Step 3: Evaluate your watermark insertion
-After you finish the "insert_watermark", "extract_features" and "train_detector",
-you can simply evaluate your watermark insertion by using the command.
+### Step 2: Run
+you can run the watermark insertion by using the command.
 ```bash
 python main.py
 ```
+
+## Reference
+
+This project is inspired by the following paper:
+
+> **Tianhao Wang** and **Florian Kerschbaum**,  
+> *"RIGA: Covert and Robust White-box Watermarking of Deep Neural Networks"*,  
+> In *Proceedings of The Web Conference (WWW)*, 2021, pp. 993–1004.  
+> [https://doi.org/10.1145/3442381.3450013](https://doi.org/10.1145/3442381.3450013)
+
+This implementation is an **independent re-implementation** based on the above concept,  
+and is provided **for educational and research purposes only**.
